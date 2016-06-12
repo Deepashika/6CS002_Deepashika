@@ -29,7 +29,7 @@ public class Main {
   int x;
   int y;
 
-  PictureFrame pf = new PictureFrame(null);
+  PictureFrame pf = new PictureFrame();
 
   private void generateDominoes() {
     _d = new LinkedList<Domino>();
@@ -867,14 +867,14 @@ public class Main {
     }
   }
 
-  public static int gecko(int _) {
-    if (_ == (32 & 16)) {
+  public static int gecko(int _m) {
+    if (_m == (32 & 16)) {
       return -7;
     } else {
-      if (_ < 0) {
-        return gecko(_ + 1 | 0);
+      if (_m < 0) {
+        return gecko(_m + 1 | 0);
       } else {
-        return gecko(_ - 1 | 0);
+        return gecko(_m - 1 | 0);
       }
     }
   }
