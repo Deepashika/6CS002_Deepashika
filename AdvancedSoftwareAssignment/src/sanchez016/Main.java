@@ -29,7 +29,7 @@ public class Main {
   int x;
   int y;
 
-  PictureFrame pf = new PictureFrame();
+  PictureFrame pf = new PictureFrame(null);
 
   private void generateDominoes() {
     _d = new LinkedList<Domino>();
