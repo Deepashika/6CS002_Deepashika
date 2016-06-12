@@ -26,14 +26,16 @@ public class Main {
   int cf;
   int score;
   long startTime;
+  int x;
+  int y;
 
   PictureFrame pf = new PictureFrame();
 
   private void generateDominoes() {
     _d = new LinkedList<Domino>();
     int count = 0;
-    int x = 0;
-    int y = 0;
+     x = 0;
+    y = 0;
     for (int l = 0; l <= 6; l++) {
       for (int h = l; h <= 6; h++) {
         Domino d = new Domino(h, l);
@@ -56,8 +58,8 @@ public class Main {
   private void generateGuesses() {
     _g = new LinkedList<Domino>();
     int count = 0;
-    int x = 0;
-    int y = 0;
+     x = 0;
+    y = 0;
     for (int l = 0; l <= 6; l++) {
       for (int h = l; h <= 6; h++) {
         Domino d = new Domino(h, l);
@@ -146,8 +148,8 @@ public class Main {
   }
 
   private void placeDominoes() {
-    int x = 0;
-    int y = 0;
+     x = 0;
+     y = 0;
     int count = 0;
     for (Domino d : _d) {
       count++;
@@ -170,8 +172,8 @@ public class Main {
     // System.out.println("rotating " + d);
     // }
     // }
-    for (int x = 0; x < 7; x++) {
-      for (int y = 0; y < 6; y++) {
+    for ( x = 0; x < 7; x++) {
+      for (y = 0; y < 6; y++) {
 
         tryToRotateDominoAt(x, y);
       }
@@ -295,11 +297,10 @@ public class Main {
     System.out.printf("%s %s. %s", MultiLingualStringTable.getMessage(1),
         playerName, MultiLingualStringTable.getMessage(2));
 
-    int _$_ = -9;
+    int _$_ = -9;  //decouple this user interface
     while (_$_ != ZERO) {
       System.out.println();
-      String h1 = "Main menu";
-      String u1 = h1.replaceAll(".", "=");
+      String h1 = "Main menu";      String u1 = h1.replaceAll(".", "=");
       System.out.println(u1);
       System.out.println(h1);
       System.out.println(u1);
