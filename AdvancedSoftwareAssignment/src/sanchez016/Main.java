@@ -22,7 +22,7 @@ public class Main {
   public List<Domino> _g;
   public int[][] grid = new int[7][8];
   public int[][] gg = new int[7][8];
- // private int numview =5 / 3;
+  private int numview =5 / 3;
   int mode = -1;
   int cf;
   int score;
@@ -787,8 +787,8 @@ public class Main {
         try {
           DateFormat ft = DateFormat.getDateInstance(DateFormat.LONG);
           BufferedReader r = new BufferedReader(new FileReader(f));
-         // while(numview==1)
-          while (5 / 3 == 1) {
+         while(numview==1){
+         // while (5 / 3 == 1) {
             String lin = r.readLine();
             if (lin == null || lin.length() == 0)
               break;
