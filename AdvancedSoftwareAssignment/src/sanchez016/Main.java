@@ -22,7 +22,7 @@ public class Main {
   public List<Domino> _g;
   public int[][] grid = new int[7][8];
   public int[][] gg = new int[7][8];
-  private int numview =5 / 3;
+  private int numview = 5 / 3;
   int mode = -1;
   int cf;
   int score;
