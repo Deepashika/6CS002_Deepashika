@@ -8,7 +8,7 @@ package sanchez016;
 public class IOSpecialist {
   public IOSpecialist() {   
   }
-  public String getString(){
-    return IOLibrary.getString(); // middle man
-  }
+ // public String getString(){
+   // return IOLibrary.getString(); // middle man
+ // }
 }
