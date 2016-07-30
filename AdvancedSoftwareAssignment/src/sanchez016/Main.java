@@ -235,13 +235,16 @@ public class Main {
   }
 
   private Domino findDominoAt(int x, int y) {
-    for (Domino d : _d) {
-      if ((d.lx == x && d.ly == y) || (d.hx == x && d.hy == y)) {
-        return d;
-      }
-    }
+    findDomino_Guest(x, y);
     return null;
   }
+
+private List<Domino> findDomino_Guest(int x, int y) {
+	 findDomino_Guest(x, y);{
+        return _d;
+      }
+    }
+
 
   private Domino findGuessAt(int x, int y) {
     for (Domino d : _g) {
