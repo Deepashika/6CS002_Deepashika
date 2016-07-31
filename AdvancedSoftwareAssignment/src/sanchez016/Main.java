@@ -52,6 +52,7 @@ public class Main {
           y++;
         }
       }
+   
     }
     if (count != 28) {
       System.out.println("something went wrong generating dominoes");
