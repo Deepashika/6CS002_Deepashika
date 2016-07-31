@@ -200,7 +200,7 @@ public class Main {
       if (d.ishl()) {
         boolean weFancyARotation = Math.random() < FIND_MATH;
         if (weFancyARotation) {
-          if (theCellBelowIsTopLeftOfHorizontalDomino(x, y)) {
+          if (topLeftH(x, y)) {
             Domino e = findDominoAt(x, y + 1);
             e.hx = x;
             e.lx = x;
@@ -237,7 +237,7 @@ public class Main {
     return thisIsTopLeftOfDomino(x + 1, y, e) && !e.ishl();
   }
 
-  private boolean theCellBelowIsTopLeftOfHorizontalDomino(int x, int y) {
+  private boolean topLeftH(int x, int y) {
     Domino e = findDominoAt(x, y + 1);
     return thisIsTopLeftOfDomino(x, y + 1, e) && e.ishl();
   }
