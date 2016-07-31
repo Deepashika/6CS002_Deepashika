@@ -31,6 +31,8 @@ public class Main {
   int y;
   boolean horiz;
 
+  static double FIND_MATH= 0.5;
+  
   PictureFrame pf = new PictureFrame();
 
   private void generateDominoes() {
@@ -152,7 +154,7 @@ public class Main {
 
   private void invertSomeDominoes() {
     for (Domino d : _d) {
-      if (Math.random() > 0.5) {
+      if (Math.random() > FIND_MATH) {
         d.invert();
       }
     }
@@ -179,7 +181,7 @@ public class Main {
 
   private void rotateDominoes() {
     // for (Domino d : dominoes) {
-    // if (Math.random() > 0.5) {
+    // if (Math.random() > FIND_MATH) {
     // System.out.println("rotating " + d);
     // }
     // }
@@ -195,7 +197,7 @@ public class Main {
     Domino d = findDominoAt(x, y);
     if (thisIsTopLeftOfDomino(x, y, d)) {
       if (d.ishl()) {
-        boolean weFancyARotation = Math.random() < 0.5;
+        boolean weFancyARotation = Math.random() < FIND_MATH;
         if (weFancyARotation) {
           if (theCellBelowIsTopLeftOfHorizontalDomino(x, y)) {
             Domino e = findDominoAt(x, y + 1);
@@ -210,7 +212,7 @@ public class Main {
           }
         }
       } else {
-        boolean weFancyARotation = Math.random() < 0.5;
+        boolean weFancyARotation = Math.random() < FIND_MATH;
         if (weFancyARotation) {
           if (theCellToTheRightIsTopLeftOfVerticalDomino(x, y)) {
             Domino e = findDominoAt(x + 1, y);
