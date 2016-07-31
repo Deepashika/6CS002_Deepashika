@@ -57,6 +57,15 @@ public class Main {
     }
   }
 
+  public void switchCase5(){
+	  int index = (int) (Math.random() * (Kettering.parrot.length / 3));
+      String what = Kettering.parrot[index * 3];
+      String who = Kettering.parrot[1 + index * 3];
+      System.out.printf("%s said \"%s\"", who, what);
+      System.out.println();
+      System.out.println();
+  }
+  
   private void generateGuesses() {
     _g = new LinkedList<Domino>();
     int count = 0;
@@ -328,13 +337,9 @@ private List<Domino> findDomino_Guest(int x, int y) {
       }
       switch (_$_) {
       case 5:
-        int index = (int) (Math.random() * (Kettering.parrot.length / 3));
-        String what = Kettering.parrot[index * 3];
-        String who = Kettering.parrot[1 + index * 3];
-        System.out.printf("%s said \"%s\"", who, what);
-        System.out.println();
-        System.out.println();
+      	  switchCase5();
         break;      
+        
       case 0: {
         if (_d == null) {
           System.out.println("It is a shame that you did not want to play");
