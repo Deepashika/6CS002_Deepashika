@@ -215,7 +215,7 @@ public class Main {
       } else {
         boolean weFancyARotation = Math.random() < FIND_MATH;
         if (weFancyARotation) {
-          if (theCellToTheRightIsTopLeftOfVerticalDomino(x, y)) {
+          if (CellRightTopLeftVerti_Domino(x, y)) {
             Domino e = findDominoAt(x + 1, y);
             e.hx = x;
             e.lx = x + 1;
@@ -232,7 +232,7 @@ public class Main {
     }
   }
 
-  private boolean theCellToTheRightIsTopLeftOfVerticalDomino(int x, int y) {
+  private boolean CellRightTopLeftVerti_Domino(int x, int y) {
     Domino e = findDominoAt(x + 1, y);
     return thisIsTopLeftOfDomino(x + 1, y, e) && !e.ishl();
   }
